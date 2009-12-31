@@ -16,7 +16,7 @@ command "Documentation for Word" do |cmd|
       "<meta http-equiv='Refresh' content='0;URL=http://devguru.com/technologies/javascript/#{ref}'>"
     else
       RadRails::UI.tool_tip "No documentation found."
-      nil
+      nil # return nil to avoid having the browser open
     end
   end
 end
