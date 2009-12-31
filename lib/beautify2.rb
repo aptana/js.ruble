@@ -1,5 +1,13 @@
 # FIXME It's adding an extra space to indent after if/else/for without braces ({), should do a full indent or no extra sapce (like original did)
 # However, in porting we actually fixed behavior that erased '\' chars!
+=begin
+
+JS Beautifier ported from the original in PHP by:
+
+(c) 2007, Einars "elfz" Lielmanis
+http://elfz.laacz.lv/beautify/
+
+=end
 class Beautifier
 
   # Whitespace characters
