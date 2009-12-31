@@ -1,7 +1,6 @@
 require 'radrails'
 require 'radrails/ui'
-#require 'docs'
-require '/Users/cwilliams/repos/js-rrbundle/lib/docs'
+require 'docs'
  
 command "Documentation for Word" do |cmd|
   cmd.key_binding = [ :ALT, :H ] # TODO Get right keybinding

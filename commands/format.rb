@@ -1,6 +1,5 @@
 require 'radrails'
-#require 'beautify'
-require '/Users/cwilliams/repos/js-rrbundle/lib/beautify2'
+require 'beautify2'
  
 command "Reformat Document" do |cmd|
   cmd.key_binding = [ :ALT, :H ] # TODO Get right keybinding
