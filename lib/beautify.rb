@@ -52,9 +52,7 @@ class Beautifier
   
   private
   def trim_output
-    while (!@output.empty? && (@output.last == ' ' || @output.last == @indent_string))
-      @output.pop()
-    end
+    @output.pop() while (!@output.empty? && (@output.last == ' ' || @output.last == @indent_string))
   end
 
   def print_newline(ignore_repeated = true)
@@ -638,9 +636,7 @@ def js_beautify(js_source_text, options = {})
                         end
                     end
                 else
-                    if (LINE_STARTERS.include?(@token_text) && @last_text != ')')
-                        print_newline()
-                    end
+                  print_newline() if (LINE_STARTERS.include?(@token_text) && @last_text != ')')
                 end
             elsif (prefix == 'SPACE')
                 print_single_space()
@@ -668,14 +664,14 @@ def js_beautify(js_source_text, options = {})
         when 'TK_OPERATOR'
             start_delim = true
             end_delim = true
-            if (@flags[:var_line] && @token_text == ',' && (is_expression(@flags[:mode])))
+            if (@flags[:var_line] && @token_text == ',' && is_expression(@flags[:mode]))
                 # do not break on comma, for(var a = 1, b = 2)
                 @flags[:var_line_tainted] = false
             end
 
-            if (@flags[:var_line])
+            if @flags[:var_line]
                 if (@token_text == ',')
-                    if (@flags[:var_line_tainted])
+                    if @flags[:var_line_tainted]
                         print_token()
                         print_newline()
                         @output.push(@indent_string)
@@ -797,7 +793,7 @@ def js_beautify(js_source_text, options = {})
             print_newline()
         when 'TK_COMMENT'
             # print_newline()
-            if (@wanted_newline)
+            if @wanted_newline
                 print_newline()
             else
                 print_single_space()
