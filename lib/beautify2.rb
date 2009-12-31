@@ -1,5 +1,4 @@
-# FIXME It's adding an extra space to indent after if/else/for without braces ({), should do a full indent or no extra sapce (like original did)
-# However, in porting we actually fixed behavior that erased '\' chars!
+# In porting we actually fixed behavior that erased '\' chars!
 =begin
 
 JS Beautifier ported from the original in PHP by:
@@ -277,7 +276,7 @@ def nl(ignore_repeated = true)
 end
 
 def space    
-  @output << ' ' if !@output.empty? and @output.last != ' ' # prevent occassional duplicate space
+  @output << ' ' if !@output.empty? and @output.last != ' ' and @output.last != @indent_string # prevent occassional duplicate space
 end
 
 def token
