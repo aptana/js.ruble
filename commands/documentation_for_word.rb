@@ -3,7 +3,7 @@ require 'radrails/ui'
 require 'docs'
  
 command "Documentation for Word" do |cmd|
-  cmd.key_binding = [ :ALT, :H ] # TODO Get right keybinding
+  cmd.key_binding = "M3+H"
   cmd.output = :show_as_html
   cmd.input = :selection 
   #cmd.input = [:selection, :word]

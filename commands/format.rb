@@ -2,7 +2,7 @@ require 'radrails'
 require 'beautify2'
  
 command "Reformat Document" do |cmd|
-  cmd.key_binding = [ :ALT, :H ] # TODO Get right keybinding
+  cmd.key_binding = "M3+H"
   cmd.output = :replace_selection
   cmd.input = :selection 
   #cmd.input = [:selection, :document]
