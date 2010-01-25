@@ -8,7 +8,7 @@ command "Reformat Document" do |cmd|
   #cmd.input = [:selection, :document]
   cmd.scope = "source.js"
   cmd.invoke do |context|
-    src = context.in.read
+    src = STDIN.read
     Beautifier.new.js_beautify(src)
   end
 end

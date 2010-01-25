@@ -9,7 +9,7 @@ command "Documentation for Word" do |cmd|
   #cmd.input = [:selection, :word]
   cmd.scope = "source.js"
   cmd.invoke do |context|
-    word = context.in.read
+    word = STDIN.read
     ref = JS_DOCS[word]
     if !ref.nil?
       "<meta http-equiv='Refresh' content='0;URL=http://devguru.com/technologies/javascript/#{ref}'>"
