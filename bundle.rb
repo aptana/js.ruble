@@ -12,7 +12,7 @@ END
 Javascript bundle for RadRails 3
 END
 
-  bundle.repository = "git://github.com/aptana/js-rrbundle.git"
+  bundle.repository = "git://github.com/aptana/js-ruble.git"
 
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|
