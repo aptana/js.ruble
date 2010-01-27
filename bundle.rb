@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 # its ruby, so this just adds commands/snippets in bundle (or replaces those with same name)
 # many ruby files could add to a single bundle
@@ -9,10 +9,10 @@ bundle 'JavaScript' do |bundle|
 END
 
   bundle.description = <<END
-Javascript bundle for RadRails 3
+Javascript bundle for RadRails
 END
 
-  bundle.repository = "git://github.com/aptana/js-rrbundle.git"
+  bundle.repository = "git://github.com/aptana/js-ruble.git"
 
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|

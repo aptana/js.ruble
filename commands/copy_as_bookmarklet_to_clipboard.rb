@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
  
 command "Copy as Bookmarklet to Clipboard" do |cmd|
   cmd.key_binding = "CTRL+SHIFT+H"

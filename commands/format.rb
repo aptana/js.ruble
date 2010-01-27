@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 require 'beautify2'
  
 command "Reformat Document" do |cmd|

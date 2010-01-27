@@ -1,5 +1,5 @@
-require 'radrails'
-require 'radrails/ui'
+require 'ruble'
+require 'ruble/ui'
 require 'docs'
  
 command "Documentation for Word" do |cmd|
@@ -14,7 +14,7 @@ command "Documentation for Word" do |cmd|
     if !ref.nil?
       "<meta http-equiv='Refresh' content='0;URL=http://devguru.com/technologies/javascript/#{ref}'>"
     else
-      RadRails::UI.tool_tip "No documentation found."
+      Ruble::UI.tool_tip "No documentation found."
       nil # return nil to avoid having the browser open
     end
   end
