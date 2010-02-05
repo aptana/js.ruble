@@ -1,19 +1,11 @@
 require 'ruble'
 
-# its ruby, so this just adds commands/snippets in bundle (or replaces those with same name)
-# many ruby files could add to a single bundle
 bundle 'JavaScript' do |bundle|
   bundle.author = "Christopher Williams"
-  bundle.copyright = <<END
-© Copyright 2009 Aptana Inc. Distributed under GPLv3 and Aptana Source license.
-END
-
-  bundle.description = <<END
-Javascript bundle for RadRails
-END
-
+  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license."
+  bundle.description = "Javascript bundle for RadRails"
   bundle.repository = "git://github.com/aptana/js-ruble.git"
-
+  
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|
     # this menu should be shown when any of the following scopes is active:
