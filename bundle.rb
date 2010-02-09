@@ -6,6 +6,10 @@ bundle 'JavaScript' do |bundle|
   bundle.description = "Javascript bundle for RadRails"
   bundle.repository = "git://github.com/aptana/js-ruble.git"
   
+  foldingStartMarker = /^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
+  foldingStopMarker = /^\s*\}/
+  bundle.set_folding_markers('source.js', foldingStartMarker, foldingStopMarker)
+  
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|
     # this menu should be shown when any of the following scopes is active:
