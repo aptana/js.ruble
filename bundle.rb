@@ -4,7 +4,7 @@ bundle 'JavaScript' do |bundle|
   bundle.author = "Christopher Williams"
   bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license."
   bundle.description = "Javascript bundle for RadRails"
-  bundle.repository = "git://github.com/aptana/js-ruble.git"
+  bundle.repository = "git://github.com/aptana/js.ruble.git"
   
   foldingStartMarker = /^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
   foldingStopMarker = /^\s*\}/
