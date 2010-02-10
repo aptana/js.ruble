@@ -8,7 +8,7 @@ bundle 'JavaScript' do |bundle|
   
   foldingStartMarker = /^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
   foldingStopMarker = /^\s*\}/
-  bundle.set_folding_markers('source.js', foldingStartMarker, foldingStopMarker)
+  bundle.folding['source.js'] = foldingStartMarker, foldingStopMarker
   
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|
