@@ -5,10 +5,14 @@ bundle 'JavaScript' do |bundle|
   bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license."
   bundle.description = "Javascript bundle for RadRails"
   bundle.repository = "git://github.com/aptana/js.ruble.git"
-  
-  foldingStartMarker = /^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
-  foldingStopMarker = /^\s*\}/
-  bundle.folding['source.js'] = foldingStartMarker, foldingStopMarker
+  # Folding
+  folding_start_marker = /^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
+  folding_stop_marker = /^\s*\}/
+  bundle.folding['source.js'] = folding_start_marker, folding_stop_marker
+  # Indentation
+  decrease_indent_pattern = /^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$/
+  increase_indent_pattern = /^.*(\{[^}"'']*|\([^)"'']*)$/
+  bundle.indent["source.js"] = increase_indent_pattern, decrease_indent_pattern
   
   # most commands install into a dedicated JS menu
   bundle.menu "JavaScript" do |js_menu|
