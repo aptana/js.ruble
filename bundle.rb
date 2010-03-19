@@ -1,8 +1,9 @@
 require 'ruble'
 
-bundle 'JavaScript' do |bundle|
+bundle do |bundle|
   bundle.author = 'Christopher Williams'
   bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
+  bundle.display_name = 'JavaScript'
   bundle.description = "Javascript bundle for RadRails, ported from the TextMate bundle"
   bundle.repository = "git://github.com/aptana/js.ruble.git"
   # Folding
