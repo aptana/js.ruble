@@ -22,7 +22,7 @@ class Beautifier
   # <!-- is a special case (ok, it's a minor hack actually)
   PUNCT = '+ - * / % & ++ -- = += -= *= /= %= == === != !== > < >= <= >> << >>> >>>= >>= <<= && &= | || ! !! , : ? ^ ^= |= ::'.split(' ')
   
-def js_beautify(js_source_text, options = {})
+  def js_beautify(js_source_text, options = {})
     tab_size = options[:indent_size] || 4
     tab_char = options[:indent_char] || ' '
     @indent_string = tab_char * tab_size
@@ -73,8 +73,8 @@ def js_beautify(js_source_text, options = {})
             if (@last_type != :TK_OPERATOR and @last_type != :TK_START_EXPR)
                 if (@last_type == :TK_START_BLOCK)
                     nl()
-                else
-                    space()
+                # else
+                #   space()
                 end
             end
             token()
@@ -263,48 +263,48 @@ def js_beautify(js_source_text, options = {})
 
     # clean empty lines from redundant spaces
     return @output.join('').gsub(/^ +$/m, '')
-end
+  end
 
-def nl(ignore_repeated = true)
-  @output.pop() while (!@output.empty? && (@output.last == ' ' || @output.last == @indent_string))  # remove possible indent
+  def nl(ignore_repeated = true)
+    @output.pop() while (!@output.empty? && (@output.last == ' ' || @output.last == @indent_string))  # remove possible indent
+  
+    return if @output.empty? # no newline on start of file
+  
+    @output << "\n" if (@output.last != "\n" || !ignore_repeated)
+  
+    @indent_level.times { @output << @indent_string }
+  end
+  
+  def space    
+    @output << ' ' if !@output.empty? and @output.last != ' ' and @output.last != @indent_string # prevent occassional duplicate space
+  end
 
-  return if @output.empty? # no newline on start of file
+  def token
+    @output << @token_text
+  end
+  
+  def indent
+    @indent_level += 1
+  end
+  
+  def unindent
+    @indent_level -= 1 if @indent_level
+  end
+  
+  def remove_indent
+    @output.pop() if !@output.empty? && (@output.last == @indent_string)
+  end
+  
+  def in_push(new_mode)
+    @mode_stack << @mode
+    @mode = new_mode
+  end
 
-  @output << "\n" if (@output.last != "\n" || !ignore_repeated)
-
-  @indent_level.times { @output << @indent_string }
-end
-
-def space    
-  @output << ' ' if !@output.empty? and @output.last != ' ' and @output.last != @indent_string # prevent occassional duplicate space
-end
-
-def token
-  @output << @token_text
-end
-
-def indent
-  @indent_level += 1
-end
-
-def unindent
-  @indent_level -= 1 if @indent_level
-end
-
-def remove_indent
-  @output.pop() if !@output.empty? && (@output.last == @indent_string)
-end
-
-def in_push(new_mode)
-  @mode_stack << @mode
-  @mode = new_mode
-end
-
-def in_pop
-  @mode = @mode_stack.pop
-end
-
-def get_next_token
+  def in_pop
+    @mode = @mode_stack.pop
+  end
+  
+  def get_next_token
     n_newlines = 0
     c = nil
     begin
@@ -358,7 +358,7 @@ def get_next_token
                 end
             end
             @parser_pos +=2
-            return ["/*comment*/", :TK_BLOCK_COMMENT]
+            return ["/*#{comment}*/", :TK_BLOCK_COMMENT]
         end
         # peek for comment // ...
         if (@input[@parser_pos, 1] == '/')
@@ -412,6 +412,6 @@ def get_next_token
     end
 
     return [c, :TK_UNKNOWN]
-end
+  end
 
 end
