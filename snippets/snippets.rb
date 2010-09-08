@@ -16,6 +16,20 @@ with_defaults :scope => "source.js" do
 }"
   end
   
+  snippet "New Function" do |s|
+    s.trigger = "fun"
+    s.expansion = "function (${1:args}) {
+  ${0:// body...}
+}"
+  end
+  
+  snippet "New Method" do |s|
+    s.trigger = ":"
+    s.expansion = ": function (${1:args}) {
+    $0
+},"
+  end
+  
   snippet "Prototype" do |s|
     s.trigger = "proto"
     s.expansion = "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
@@ -65,7 +79,7 @@ with_defaults :scope => "source.js" do
   
   snippet "setTimeout function" do |s|
     s.trigger = "timeout"
-    s.expansion = "setTimeout(function() {$0}${2:}, ${1:10});"
+    s.expansion = "setTimeout(function() {$0}, ${1:10});"
   end
   
   snippet "Object Method String" do |s|
