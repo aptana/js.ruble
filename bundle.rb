@@ -63,22 +63,11 @@ bundle do |bundle|
   end
 end
 
-# Extend Ruble::Editor to add special ENV vars
-module Ruble
-  class Editor
-    unless method_defined?(:modify_env_pre_js_bundle)
-      alias :modify_env_pre_js_bundle :modify_env
-      def modify_env(scope, env)
-        env_hash = modify_env_pre_js_bundle(scope, env)
-        if scope.start_with? "source.js"
-          env_hash['TM_COMMENT_START'] = "// "          
-          env_hash.delete('TM_COMMENT_END')
-          env_hash['TM_COMMENT_START_2'] = "/* "
-          env_hash['TM_COMMENT_END_2'] = " */"
-          env_hash.delete('TM_COMMENT_DISABLE_INDENT')
-        end
-        env_hash
-      end
-    end
-  end
+# Add special ENV vars
+env "source.js" do |e|
+  e['TM_COMMENT_START'] = "// "          
+  e.delete('TM_COMMENT_END')
+  e['TM_COMMENT_START_2'] = "/* "
+  e['TM_COMMENT_END_2'] = " */"
+  e.delete('TM_COMMENT_DISABLE_INDENT')
 end
