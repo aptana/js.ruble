@@ -56,14 +56,14 @@ with_defaults :scope => "source.js" do
   snippet "for (...) {...}" do |s|
     s.trigger = "for"
     s.expansion = "for (var ${2:i}=0; ${2:i} < ${1:Things}.length; ${2:i}++) {
-  ${3:${1:Things}[${2:i}]}$0
+  ${1:Things}[${2:i}]
 };"
   end
   
   snippet "for (...) {...} (Improved Native For-Loop)" do |s|
     s.trigger = "for"
     s.expansion = "for (var ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--){
-  ${3:${1:Things}[${2:i}]}$0
+  ${1:Things}[${2:i}]
 };"
   end
   
