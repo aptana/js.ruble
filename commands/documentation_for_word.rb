@@ -1,6 +1,5 @@
 require 'ruble'
 require 'ruble/ui'
-require 'docs'
  
 command "Documentation for Word" do |cmd|
   cmd.key_binding = "CTRL+H"
@@ -9,7 +8,8 @@ command "Documentation for Word" do |cmd|
   #cmd.input = [:selection, :word]
   cmd.scope = "source.js"
   cmd.invoke do |context|
-    word = STDIN.read
+    word = $stdin.read
+    require 'docs'
     ref = JS_DOCS[word]
     if !ref.nil?
       "<meta http-equiv='Refresh' content='0;URL=http://devguru.com/technologies/javascript/#{ref}'>"
