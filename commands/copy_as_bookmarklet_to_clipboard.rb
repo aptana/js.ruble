@@ -10,6 +10,7 @@ command "Copy as Bookmarklet to Clipboard" do |cmd|
     #
     # Written by John Gruber, taken with permission from:
     # http://daringfireball.net/2007/03/javascript_bookmarklet_builder
+    # Licence: http://www.opensource.org/licenses/mit-license.php
     src = STDIN.read
     
     # Zap the first line if there's already a bookmarklet comment:
