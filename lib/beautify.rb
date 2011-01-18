@@ -19,12 +19,12 @@
     js_beautify(js_source_text, options)
 
   The options are:
-    :indent_size (default 4) Ñ indentation size,
-    :indent_char (default space) Ñ character to indent with,
-    :preserve_newlines (default true) Ñ whether existing line breaks should be preserved,
-    :indent_level (default 0)  Ñ initial indentation level, you probably won't need this ever,
+    :indent_size (default 4) â€” indentation size,
+    :indent_char (default space) â€” character to indent with,
+    :preserve_newlines (default true) â€” whether existing line breaks should be preserved,
+    :indent_level (default 0)  â€” initial indentation level, you probably won't need this ever,
 
-    :space_after_anon_function (default false) Ñ if true, then space is added between "function ()"
+    :space_after_anon_function (default false) â€” if true, then space is added between "function ()"
             (jslint is happy about this); if false, then the common "function()" output is used.
 
     e.g
