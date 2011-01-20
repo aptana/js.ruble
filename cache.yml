@@ -170,7 +170,7 @@ children:
   displayName: JavaScript
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-2b3e9d72-ae10-4718-9103-028c73d1dd1a,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-cc58b1c3-eaf3-4293-ab0a-8443a5aacffc,
   path: bundle.rb, scope: source.js}
 - !!com.aptana.scripting.model.CommandElement
   async: false
