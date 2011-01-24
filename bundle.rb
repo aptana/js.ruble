@@ -72,4 +72,4 @@ env "source.js" do |e|
   e.delete('TM_COMMENT_DISABLE_INDENT')
 end
 
-#smart_typing_pairs["source.js"] = ['"', '"', '(', ')', '{', '}', '[', ']', "'", "'"]
+smart_typing_pairs["source.js"] = ['"', '"', '(', ')', '{', '}', '[', ']', "'", "'"]
