@@ -1,7 +1,184 @@
 !!com.aptana.scripting.model.BundleElement
 author: Christopher Williams
 children:
-- !command
+- !!com.aptana.scripting.model.MenuElement
+  children:
+  - children:
+    - children:
+      - children: &id001 []
+        commandName: if
+        customProperties: null
+        displayName: if
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: if ... else
+        customProperties: null
+        displayName: if ... else
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: for (...) {...}
+        customProperties: null
+        displayName: for (...) {...}
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: for (...) {...} (Improved Native For-Loop)
+        customProperties: null
+        displayName: for (...) {...} (Improved Native For-Loop)
+        path: bundle.rb
+        scope: null
+      commandName: Control
+      customProperties: null
+      displayName: Control
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: 'Object key - key: "value"'
+        customProperties: null
+        displayName: 'Object key - key: "value"'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Object Value JS
+        customProperties: null
+        displayName: Object Value JS
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Prototype
+        customProperties: null
+        displayName: Prototype
+        path: bundle.rb
+        scope: null
+      commandName: Language
+      customProperties: null
+      displayName: Language
+      path: bundle.rb
+      scope: null
+    - children:
+      - children: *id001
+        commandName: Anonymous Function
+        customProperties: null
+        displayName: Anonymous Function
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Function
+        customProperties: null
+        displayName: Function
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: New Function
+        customProperties: null
+        displayName: New Function
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: New Method
+        customProperties: null
+        displayName: New Method
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Object Method
+        customProperties: null
+        displayName: Object Method
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Object Method String
+        customProperties: null
+        displayName: Object Method String
+        path: bundle.rb
+        scope: null
+      commandName: Function
+      customProperties: null
+      displayName: Function
+      path: bundle.rb
+      scope: null
+    commandName: Core
+    customProperties: null
+    displayName: Core
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: setTimeout function
+      customProperties: null
+      displayName: setTimeout function
+      path: bundle.rb
+      scope: null
+    commandName: BOM
+    customProperties: null
+    displayName: BOM
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Documentation for Word
+    customProperties: null
+    displayName: Documentation for Word
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Reformat Document
+    customProperties: null
+    displayName: Reformat Document
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Copy as Bookmarklet to Clipboard
+    customProperties: null
+    displayName: Copy as Bookmarklet to Clipboard
+    path: bundle.rb
+    scope: null
+  commandName: JavaScript
+  customProperties: null
+  displayName: JavaScript
+  path: bundle.rb
+  scope: source.js
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-d36936b8-b828-480a-9ef4-598f789a0868,
+  path: bundle.rb, scope: source.js}
+- !!com.aptana.scripting.model.SmartTypingPairsElement
+  customProperties: null
+  displayName: smart_typing_pairs-12dcf49f-dfba-4b4e-bc34-183335ceb5e5
+  pairs: [&id002 '"', *id002, (, ), '{', '}', '[', ']', &id003 '''', *id003]
+  path: bundle.rb
+  scope: source.js
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Copy as Bookmarklet to Clipboard
@@ -14,7 +191,7 @@ children:
   runType: current_thread
   scope: source.js
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Documentation for Word
@@ -27,7 +204,7 @@ children:
   runType: current_thread
   scope: source.js
   workingDirectoryType: UNDEFINED
-- !command
+- !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Reformat Document
@@ -253,184 +430,17 @@ children:
   runType: current_thread
   scope: source.js
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.MenuElement
-  children:
-  - children:
-    - children:
-      - children: &id001 []
-        commandName: if
-        customProperties: null
-        displayName: if
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: if ... else
-        customProperties: null
-        displayName: if ... else
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: '-'
-        customProperties: null
-        displayName: '-'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: for (...) {...}
-        customProperties: null
-        displayName: for (...) {...}
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: for (...) {...} (Improved Native For-Loop)
-        customProperties: null
-        displayName: for (...) {...} (Improved Native For-Loop)
-        path: bundle.rb
-        scope: null
-      commandName: Control
-      customProperties: null
-      displayName: Control
-      path: bundle.rb
-      scope: null
-    - children:
-      - children: *id001
-        commandName: 'Object key - key: "value"'
-        customProperties: null
-        displayName: 'Object key - key: "value"'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: Object Value JS
-        customProperties: null
-        displayName: Object Value JS
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: '-'
-        customProperties: null
-        displayName: '-'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: Prototype
-        customProperties: null
-        displayName: Prototype
-        path: bundle.rb
-        scope: null
-      commandName: Language
-      customProperties: null
-      displayName: Language
-      path: bundle.rb
-      scope: null
-    - children:
-      - children: *id001
-        commandName: Anonymous Function
-        customProperties: null
-        displayName: Anonymous Function
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: Function
-        customProperties: null
-        displayName: Function
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: '-'
-        customProperties: null
-        displayName: '-'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: New Function
-        customProperties: null
-        displayName: New Function
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: New Method
-        customProperties: null
-        displayName: New Method
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: '-'
-        customProperties: null
-        displayName: '-'
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: Object Method
-        customProperties: null
-        displayName: Object Method
-        path: bundle.rb
-        scope: null
-      - children: *id001
-        commandName: Object Method String
-        customProperties: null
-        displayName: Object Method String
-        path: bundle.rb
-        scope: null
-      commandName: Function
-      customProperties: null
-      displayName: Function
-      path: bundle.rb
-      scope: null
-    commandName: Core
-    customProperties: null
-    displayName: Core
-    path: bundle.rb
-    scope: null
-  - children:
-    - children: *id001
-      commandName: setTimeout function
-      customProperties: null
-      displayName: setTimeout function
-      path: bundle.rb
-      scope: null
-    commandName: BOM
-    customProperties: null
-    displayName: BOM
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Documentation for Word
-    customProperties: null
-    displayName: Documentation for Word
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: '-'
-    customProperties: null
-    displayName: '-'
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Reformat Document
-    customProperties: null
-    displayName: Reformat Document
-    path: bundle.rb
-    scope: null
-  - children: *id001
-    commandName: Copy as Bookmarklet to Clipboard
-    customProperties: null
-    displayName: Copy as Bookmarklet to Clipboard
-    path: bundle.rb
-    scope: null
-  commandName: JavaScript
-  customProperties: null
-  displayName: JavaScript
-  path: bundle.rb
-  scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-e0e2f4c0-ff03-430d-9853-94e4b6b6f39a,
-  path: bundle.rb, scope: source.js}
+- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
+  displayName: JavaScript Template, filetype: '*.js', inputPath: null, keyBindingMap: null,
+  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
+  scope: null, workingDirectoryType: UNDEFINED}
 copyright: © Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$)'}
 description: Javascript bundle for RadRails, ported from the TextMate bundle
 displayName: JavaScript
 fileTypeRegistry: {}
-fileTypes: []
+fileTypes: *id001
 foldingStartMarkers: {!scope 'source.js': !regexp '(?-mix:\/\*+|^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$)'}
 foldingStopMarkers: {!scope 'source.js': !regexp '(?-mix:\*+\/|^\s*\})'}
 increaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^.*(\{[^}"'''']*|\([^)"'''']*)$)'}
