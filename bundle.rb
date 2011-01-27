@@ -6,10 +6,10 @@ bundle do |bundle|
   bundle.display_name = 'JavaScript'
   bundle.description = "Javascript bundle for RadRails, ported from the TextMate bundle"
   bundle.repository = "git://github.com/aptana/js.ruble.git"
-  # Folding
-  folding_start_marker = /\/\*+|^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
-  folding_stop_marker = /\*+\/|^\s*\}/
-  bundle.folding['source.js'] = folding_start_marker, folding_stop_marker
+  # Set up folding. Folding is now done in Java code for this language
+  # folding_start_marker = /\/\*+|^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$/
+  # folding_stop_marker = /\*+\/|^\s*\}/
+  # bundle.folding['source.js'] = folding_start_marker, folding_stop_marker
   # Indentation
   decrease_indent_pattern = /^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$/
   increase_indent_pattern = /^.*(\{[^}"'']*|\([^)"'']*)$/
