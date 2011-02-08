@@ -170,11 +170,11 @@ children:
   displayName: JavaScript
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-4f2890d9-e29a-4995-b3d3-5d1bb4171002,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-5056cd27-1014-46ca-8c75-acc1c956b471,
   path: bundle.rb, scope: source.js}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-88628aaf-b450-48fa-8910-d0da919f40f3
+  displayName: smart_typing_pairs-7e7c7945-5f98-4fca-ac99-193419ec24bd
   pairs: [&id002 '"', *id002, (, ), '{', '}', '[', ']', &id003 '''', *id003]
   path: bundle.rb
   scope: source.js
@@ -182,6 +182,7 @@ children:
   async: false
   customProperties: null
   displayName: Copy as Bookmarklet to Clipboard
+  input: [selection]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
@@ -195,6 +196,7 @@ children:
   async: false
   customProperties: null
   displayName: Documentation for Word
+  input: [selection]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+H]
@@ -208,6 +210,7 @@ children:
   async: false
   customProperties: null
   displayName: Reformat Document
+  input: [selection, document]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
@@ -223,6 +226,7 @@ children:
     prefix_values: [':f']
   displayName: Object Method
   expansion: "${1:method_name}: function(${2:attribute}){\n  $0\n}${3:,}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -237,6 +241,7 @@ children:
     prefix_values: [fun]
   displayName: Function
   expansion: "function ${1:function_name} (${2:argument}) {\n  ${0:// body...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -251,6 +256,7 @@ children:
     prefix_values: [fun]
   displayName: New Function
   expansion: "function (${1:args}) {\n  ${0:// body...}\n}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -265,6 +271,7 @@ children:
     prefix_values: [':']
   displayName: New Method
   expansion: ": function (${1:args}) {\n    $0\n},"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -280,6 +287,7 @@ children:
   displayName: Prototype
   expansion: "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument})\
     \ {\n  ${0:// body...}\n};\n"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -294,6 +302,7 @@ children:
     prefix_values: [f]
   displayName: Anonymous Function
   expansion: function($1) {${0:$TM_SELECTED_TEXT}};
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -308,6 +317,7 @@ children:
     prefix_values: [if]
   displayName: if
   expansion: if (${1:true}) {${0:$TM_SELECTED_TEXT}};
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -322,6 +332,7 @@ children:
     prefix_values: [ife]
   displayName: if ... else
   expansion: if (${1:true}) {${0:$TM_SELECTED_TEXT}} else{};
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -337,6 +348,7 @@ children:
   displayName: for (...) {...}
   expansion: "for (var ${2:i}=0; ${2:i} < ${1:Things}.length; ${2:i}++) {\n  ${1:Things}[${2:i}]\n\
     };"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -352,6 +364,7 @@ children:
   displayName: for (...) {...} (Improved Native For-Loop)
   expansion: "for (var ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--){\n\
     \  ${1:Things}[${2:i}]\n};"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -366,6 +379,7 @@ children:
     prefix_values: [':,']
   displayName: Object Value JS
   expansion: ${1:value_name}:${0:value},
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -380,6 +394,7 @@ children:
     prefix_values: [':']
   displayName: 'Object key - key: "value"'
   expansion: '${1:key}: ${2:"${3:value}"}${4:, }'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -394,6 +409,7 @@ children:
     prefix_values: [timeout]
   displayName: setTimeout function
   expansion: setTimeout(function() {$0}, ${1:10});
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -408,6 +424,7 @@ children:
     prefix_values: ['":f']
   displayName: Object Method String
   expansion: "'${1:${2:#thing}:${3:click}}': function(element){\n  $0\n}${4:,}"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -422,6 +439,7 @@ children:
     prefix_values: [get]
   displayName: Get Elements
   expansion: getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -430,10 +448,20 @@ children:
   runType: current_thread
   scope: source.js
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement {async: false, customProperties: null,
-  displayName: JavaScript Template, filetype: '*.js', inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.TemplateElement
+  async: false
+  customProperties: null
+  displayName: JavaScript Template
+  filetype: '*.js'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$)'}
