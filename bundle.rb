@@ -58,7 +58,6 @@ bundle do |bundle|
 	  
 	  js_menu.command "Documentation for Word"
     js_menu.separator
-    js_menu.command "Reformat Document"
     js_menu.command "Copy as Bookmarklet to Clipboard"
   end
 end
