@@ -2,7 +2,7 @@ require 'ruble'
 require 'ruble/ui'
  
 command "Documentation for Word" do |cmd|
-  cmd.key_binding = "CTRL+H"
+  #cmd.key_binding = "M4+H"
   cmd.output = :show_as_html
   cmd.input = :selection 
   #cmd.input = [:selection, :word]
