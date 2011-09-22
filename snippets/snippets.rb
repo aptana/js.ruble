@@ -89,9 +89,10 @@ with_defaults :scope => "source.js" do
 }${4:,}"
   end
   
-  snippet "Get Elements" do |s|
-    s.trigger = "get"
-    s.expansion = "getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')"
-  end
+# FIXME Not currently working due to unsupported TextMate functionality
+  # snippet "Get Elements" do |s|
+    # s.trigger = "get"
+    # s.expansion = "getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')"
+  # end
   
 end

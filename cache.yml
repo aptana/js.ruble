@@ -1,6 +1,61 @@
 !!com.aptana.scripting.model.BundleElement
 author: Christopher Williams
 children:
+- !command
+  async: false
+  customProperties: null
+  displayName: Copy as Bookmarklet to Clipboard
+  input: [selection]
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
+  outputPath: null
+  outputType: copy_to_clipboard
+  path: commands/copy_as_bookmarklet_to_clipboard.rb
+  runType: current_thread
+  scope: source.js
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Documentation for Word
+  input: [selection]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_html
+  path: commands/documentation_for_word.rb
+  runType: current_thread
+  scope: source.js
+  workingDirectoryType: UNDEFINED
+- !command
+  async: false
+  customProperties: null
+  displayName: Reformat Document
+  input: [selection, document]
+  inputPath: null
+  keyBindingMap:
+    !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
+  outputPath: null
+  outputType: replace_selection
+  path: commands/format.rb
+  runType: current_thread
+  scope: source.js
+  workingDirectoryType: UNDEFINED
+- !template
+  async: false
+  customProperties: null
+  displayName: JavaScript Template
+  filetype: '*.js'
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: templates/templates.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.MenuElement
   children:
   - children:
@@ -164,55 +219,14 @@ children:
   displayName: JavaScript
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-adc93a0c-d2fa-4295-8ab7-a015319dbf15,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-f523e4e7-7f2e-44a6-819c-4e18a3d2c5ae,
   path: bundle.rb, scope: source.js}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-18ef25ae-966d-452a-a7eb-7d700fab5cc1
+  displayName: smart_typing_pairs-3ae0a8e6-6025-49e8-b8f7-b48cedcc5068
   pairs: ['"', '"', (, ), '{', '}', '[', ']', '''', '''']
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Copy as Bookmarklet to Clipboard
-  input: [selection]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
-  outputPath: null
-  outputType: copy_to_clipboard
-  path: commands/copy_as_bookmarklet_to_clipboard.rb
-  runType: current_thread
-  scope: source.js
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Documentation for Word
-  input: [selection]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_html
-  path: commands/documentation_for_word.rb
-  runType: current_thread
-  scope: source.js
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
-  displayName: Reformat Document
-  input: [selection, document]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CTRL+SHIFT+H]
-  outputPath: null
-  outputType: replace_selection
-  path: commands/format.rb
-  runType: current_thread
-  scope: source.js
-  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
@@ -426,44 +440,15 @@ children:
   runType: current_thread
   scope: source.js
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.SnippetElement
-  async: false
-  customProperties:
-    prefix_values: [get]
-  displayName: Get Elements
-  expansion: getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: insert_as_snippet
-  path: snippets/snippets.rb
-  runType: current_thread
-  scope: source.js
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement
-  async: false
-  customProperties: null
-  displayName: JavaScript Template
-  filetype: '*.js'
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: discard
-  path: templates/templates.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^(.*\*\/)?\s*(\}|\))([^{]*\{)?([;,]?\s*|\.[^{]*|\s*\)[;\s]*)$)'}
 description: Javascript bundle for RadRails, ported from the TextMate bundle
 displayName: JavaScript
-fileTypeRegistry: &id002 {}
-fileTypes: *id001
-foldingStartMarkers: *id002
-foldingStopMarkers: *id002
+fileTypeRegistry: {}
+fileTypes: []
+foldingStartMarkers: {}
+foldingStopMarkers: {}
 increaseIndentMarkers: {!scope 'source.js': !regexp '(?-mix:^.*(\{[^}"'''']*|\([^)"'''']*)$)'}
 license: null
 licenseUrl: null
