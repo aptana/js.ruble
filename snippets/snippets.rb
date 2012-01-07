@@ -66,6 +66,13 @@ with_defaults :scope => "source.js" do
   ${1:Things}[${2:i}]
 };"
   end
+
+  snippet "for (...) {...} (High-Performance For-Loop)" do |s|
+    s.trigger = "for"
+    s.expansion = "for(var ${2:i}=0,${3:j}=${1:Things}.length; ${2:i}<${3:j}; ${2:i}++){
+  ${1:Things}[${2:i}]
+};"
+  end
   
   snippet "Object Value JS" do |s|
     s.trigger = ":,"
