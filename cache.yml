@@ -164,11 +164,11 @@ children:
   displayName: JavaScript
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-af0d7772-8f60-447d-af4c-c1de138daecb,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-d7c5c366-db9c-4f99-9a4a-d723692c3a97,
   path: bundle.rb, scope: source.js}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-c9a105d6-0473-49b2-860a-7e9e47310bfd
+  displayName: smart_typing_pairs-9b638688-cd95-4e9d-8c94-20f13f814fb3
   pairs: ['"', '"', (, ), '{', '}', '[', ']', '''', '''']
   path: bundle.rb
   scope: source.js
@@ -356,6 +356,22 @@ children:
     prefix_values: [for]
   displayName: for (...) {...} (Improved Native For-Loop)
   expansion: "for (var ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--){\n\
+    \  ${1:Things}[${2:i}]\n};"
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  customProperties:
+    prefix_values: [for]
+  displayName: for (...) {...} (High-Performance For-Loop)
+  expansion: "for(var ${2:i}=0,${3:j}=${1:Things}.length; ${2:i}<${3:j}; ${2:i}++){\n\
     \  ${1:Things}[${2:i}]\n};"
   input: [none]
   inputPath: null
