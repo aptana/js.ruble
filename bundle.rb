@@ -3,7 +3,7 @@ require 'ruble'
 bundle do |bundle|
   bundle.author = 'Christopher Williams'
   bundle.copyright = "Copyright 2010 Aptana Inc. Distributed under the MIT license."
-  bundle.display_name = 'JavaScript'
+  bundle.display_name = t(:bundle_name)
   bundle.description = "Javascript bundle for RadRails, ported from the TextMate bundle"
   bundle.repository = "git://github.com/aptana/js.ruble.git"
   # Set up folding. Folding is now done in Java code for this language
@@ -16,35 +16,35 @@ bundle do |bundle|
   bundle.indent["source.js"] = increase_indent_pattern, decrease_indent_pattern
   
   # most commands install into a dedicated JS menu
-  bundle.menu "JavaScript" do |js_menu|
+  bundle.menu t(:bundle_name) do |js_menu|
     # this menu should be shown when any of the following scopes is active:
     js_menu.scope = [ "source.js" ]
     
 	  # command/snippet names must be unique within bundle and are case insensitive
 	  
-	  js_menu.menu "Core" do |core_menu|
-	    core_menu.menu "Control" do |control_menu|
-	      control_menu.command "if"
-	      control_menu.command "if ... else"
+	  js_menu.menu t(:core) do |core_menu|
+	    core_menu.menu t(:control) do |control_menu|
+	      control_menu.command t(:if)
+	      control_menu.command t(:if_else)
 	      control_menu.separator
-	      control_menu.command "for (...) {...}"
-	      control_menu.command "for (...) {...} (Improved Native For-Loop)"
+	      control_menu.command t(:for)
+	      control_menu.command t(:for_native)
 	    end
-	    core_menu.menu "Language" do |language_menu|
-        language_menu.command "Object key - key: \"value\""
-	      language_menu.command "Object Value JS"
+	    core_menu.menu t(:language) do |language_menu|
+        language_menu.command t(:object_key)
+	      language_menu.command t(:object_value)
 	      language_menu.separator
-	      language_menu.command "Prototype"
+	      language_menu.command t(:prototype)
 	    end
-	    core_menu.menu "Function" do |function_menu|
-	      function_menu.command "Anonymous Function"
-	      function_menu.command "Function"
+	    core_menu.menu t(:function) do |function_menu|
+	      function_menu.command t(:anonymous_function)
+	      function_menu.command t(:function)
 	      function_menu.separator
-	      function_menu.command "New Function"
-	      function_menu.command "New Method"
+	      function_menu.command t(:new_function)
+	      function_menu.command t(:new_method)
         function_menu.separator
-	      function_menu.command "Object Method"
-	      function_menu.command "Object Method String"
+	      function_menu.command t(:object_method)
+	      function_menu.command t(:object_method_string)
 	    end
 	  end
 	  
@@ -52,13 +52,13 @@ bundle do |bundle|
 	  #   dom_menu.command "Get Elements"
 	  # end
 	  
-	  js_menu.menu "BOM" do |bom_menu|
-	    bom_menu.command "setTimeout function"
+	  js_menu.menu t(:bom) do |bom_menu|
+	    bom_menu.command t(:setTimeout)
 	  end
 	  
-	  js_menu.command "Documentation for Word"
+	  js_menu.command t(:doc_for_word)
     js_menu.separator
-    js_menu.command "Copy as Bookmarklet to Clipboard"
+    js_menu.command t(:copy_as_bookmarklet)
   end
 end
 

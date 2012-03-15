@@ -1,0 +1,24 @@
+en:
+  bundle_name: 'JavaScript'
+  core: "Core"
+  control: "Control"
+  if: "if"
+  if_else: "if ... else"
+  for: "for (...) {...}"
+  for_native: "for (...) {...} (Improved Native For-Loop)"
+  language: "Language"
+  object_key: 'Object key - key: "value"'
+  object_value: "Object Value JS"
+  prototype: "Prototype"
+  function: "Function"
+  anonymous_function: "Anonymous Function"
+  new_function: "New Function"
+  new_method: "New Method"
+  object_method: "Object Method"
+  object_method_string: "Object Method String"
+  bom: "BOM"
+  setTimeout: "setTimeout function"
+  doc_for_word: "Documentation for Word"
+  copy_as_bookmarklet: "Copy as Bookmarklet to Clipboard"
+  reformat_document: "Reformat Document"
+  

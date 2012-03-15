@@ -2,35 +2,35 @@ require 'ruble'
 
 with_defaults :scope => "source.js" do
   
-  snippet "Object Method" do |s|
+  snippet t(:object_method) do |s|
     s.trigger = ":f"
     s.expansion = "${1:method_name}: function(${2:attribute}){
   $0
 }${3:,}"
   end
   
-  snippet "Function" do |s|
+  snippet t(:function) do |s|
     s.trigger = "fun"
     s.expansion = "function ${1:function_name} (${2:argument}) {
   ${0:// body...}
 }"
   end
   
-  snippet "New Function" do |s|
+  snippet t(:new_function) do |s|
     s.trigger = "fun"
     s.expansion = "function (${1:args}) {
   ${0:// body...}
 }"
   end
   
-  snippet "New Method" do |s|
+  snippet t(:new_method) do |s|
     s.trigger = ":"
     s.expansion = ": function (${1:args}) {
     $0
 },"
   end
   
-  snippet "Prototype" do |s|
+  snippet t(:prototype) do |s|
     s.trigger = "proto"
     s.expansion = "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
   ${0:// body...}
@@ -38,29 +38,29 @@ with_defaults :scope => "source.js" do
 "
   end
   
-  snippet "Anonymous Function" do |s|
+  snippet t(:anonymous_function) do |s|
     s.trigger = "f"
     s.expansion = "function($1) {${0:$TM_SELECTED_TEXT}};"
   end
   
-  snippet "if" do |s|
+  snippet t(:if) do |s|
     s.trigger = "if"
     s.expansion = "if (${1:true}) {${0:$TM_SELECTED_TEXT}};"
   end
   
-  snippet "if ... else" do |s|
+  snippet t(:if_else) do |s|
     s.trigger = "ife"
     s.expansion = "if (${1:true}) {${0:$TM_SELECTED_TEXT}} else{};"
   end
   
-  snippet "for (...) {...}" do |s|
+  snippet t(:for) do |s|
     s.trigger = "for"
     s.expansion = "for (var ${2:i}=0; ${2:i} < ${1:Things}.length; ${2:i}++) {
   ${1:Things}[${2:i}]
 };"
   end
   
-  snippet "for (...) {...} (Improved Native For-Loop)" do |s|
+  snippet t(:for_native) do |s|
     s.trigger = "for"
     s.expansion = "for (var ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--){
   ${1:Things}[${2:i}]
@@ -74,22 +74,22 @@ with_defaults :scope => "source.js" do
 };"
   end
   
-  snippet "Object Value JS" do |s|
+  snippet t(:object_value) do |s|
     s.trigger = ":,"
     s.expansion = "${1:value_name}:${0:value},"
   end
   
-  snippet "Object key - key: \"value\"" do |s|
+  snippet t(:object_key) do |s|
     s.trigger = ":"
     s.expansion = '${1:key}: ${2:"${3:value}"}${4:, }'
   end
   
-  snippet "setTimeout function" do |s|
+  snippet t(:setTimeout) do |s|
     s.trigger = "timeout"
     s.expansion = "setTimeout(function() {$0}, ${1:10});"
   end
   
-  snippet "Object Method String" do |s|
+  snippet t(:object_method_string) do |s|
     s.trigger = '":f'
     s.expansion = "'${1:${2:#thing}:${3:click}}': function(element){
   $0
