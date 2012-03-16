@@ -1,6 +1,6 @@
 require 'ruble'
  
-command "Copy as Bookmarklet to Clipboard" do |cmd|
+command t(:copy_as_bookmarklet) do |cmd|
   cmd.key_binding = "CTRL+SHIFT+H"
   cmd.output = :copy_to_clipboard
   cmd.input = :selection 
