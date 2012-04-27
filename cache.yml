@@ -35,6 +35,24 @@ children:
         displayName: for (...) {...} (Improved Native For-Loop)
         path: bundle.rb
         scope: null
+      - children: *id001
+        commandName: '-'
+        customProperties: null
+        displayName: '-'
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: for (var key in obj){}
+        customProperties: null
+        displayName: for (var key in obj){}
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: for-in if hasOwnProperty
+        customProperties: null
+        displayName: for-in if hasOwnProperty
+        path: bundle.rb
+        scope: null
       commandName: Control
       customProperties: null
       displayName: Control
@@ -78,9 +96,21 @@ children:
         path: bundle.rb
         scope: null
       - children: *id001
-        commandName: Function
+        commandName: Function Declaration function name()
         customProperties: null
-        displayName: Function
+        displayName: Function Declaration function name()
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Function Expression var name = function()
+        customProperties: null
+        displayName: Function Expression var name = function()
+        path: bundle.rb
+        scope: null
+      - children: *id001
+        commandName: Immediate Invocation Function (function(){}());
+        customProperties: null
+        displayName: Immediate Invocation Function (function(){}());
         path: bundle.rb
         scope: null
       - children: *id001
@@ -142,6 +172,54 @@ children:
     path: bundle.rb
     scope: null
   - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children:
+    - children: *id001
+      commandName: Namespace
+      customProperties: null
+      displayName: Namespace
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Safe Namespace
+      customProperties: null
+      displayName: Safe Namespace
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Module Pattern
+      customProperties: null
+      displayName: Module Pattern
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Extend Module Pattern
+      customProperties: null
+      displayName: Extend Module Pattern
+      path: bundle.rb
+      scope: null
+    - children: *id001
+      commandName: Revealing Module Pattern
+      customProperties: null
+      displayName: Revealing Module Pattern
+      path: bundle.rb
+      scope: null
+    commandName: Pattern
+    customProperties: null
+    displayName: Pattern
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
     commandName: Documentation for Word
     customProperties: null
     displayName: Documentation for Word
@@ -164,11 +242,11 @@ children:
   displayName: JavaScript
   path: bundle.rb
   scope: source.js
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-d7c5c366-db9c-4f99-9a4a-d723692c3a97,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-9563bfc7-cf9e-4b98-8797-eb7133933e18,
   path: bundle.rb, scope: source.js}
 - !!com.aptana.scripting.model.SmartTypingPairsElement
   customProperties: null
-  displayName: smart_typing_pairs-9b638688-cd95-4e9d-8c94-20f13f814fb3
+  displayName: smart_typing_pairs-9fd6fa9d-5113-45da-878d-97d726d61855
   pairs: ['"', '"', (, ), '{', '}', '[', ']', '''', '''']
   path: bundle.rb
   scope: source.js
@@ -215,10 +293,13 @@ children:
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [':f']
+  description: null
   displayName: Object Method
   expansion: "${1:method_name}: function(${2:attribute}){\n  $0\n}${3:,}"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -227,13 +308,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [fun]
-  displayName: Function
+  description: null
+  displayName: Function Declaration function name()
   expansion: "function ${1:function_name} (${2:argument}) {\n  ${0:// body...}\n}"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -242,13 +327,55 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [fun]
+  description: null
+  displayName: Function Expression var name = function()
+  expansion: "var ${1:var_name} = function (${2:argument}) {\n  ${0:// body...}\n}"
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [fun]
+  description: null
+  displayName: Immediate Invocation Function (function(){}());
+  expansion: "(function () {\n  ${0:// body...}\n}());"
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [fun]
+  description: null
   displayName: New Function
   expansion: "function (${1:args}) {\n  ${0:// body...}\n}"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -257,13 +384,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [':']
+  description: null
   displayName: New Method
   expansion: ": function (${1:args}) {\n    $0\n},"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -272,14 +403,18 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [proto]
+  description: null
   displayName: Prototype
   expansion: "${1:class_name}.prototype.${2:method_name} = function(${3:first_argument})\
     \ {\n  ${0:// body...}\n};\n"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -288,13 +423,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [f]
+  description: null
   displayName: Anonymous Function
   expansion: function($1) {${0:$TM_SELECTED_TEXT}};
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -303,13 +442,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [if]
+  description: null
   displayName: if
   expansion: if (${1:true}) {${0:$TM_SELECTED_TEXT}};
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -318,13 +461,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [ife]
+  description: null
   displayName: if ... else
   expansion: if (${1:true}) {${0:$TM_SELECTED_TEXT}} else{};
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -333,14 +480,18 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [for]
+  description: null
   displayName: for (...) {...}
   expansion: "for (var ${2:i}=0; ${2:i} < ${1:Things}.length; ${2:i}++) {\n  ${1:Things}[${2:i}]\n\
     };"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -349,14 +500,18 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [for]
+  description: null
   displayName: for (...) {...} (Improved Native For-Loop)
   expansion: "for (var ${2:i} = ${1:Things}.length - 1; ${2:i} >= 0; ${2:i}--){\n\
     \  ${1:Things}[${2:i}]\n};"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -365,14 +520,18 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [for]
+  description: null
   displayName: for (...) {...} (High-Performance For-Loop)
   expansion: "for(var ${2:i}=0,${3:j}=${1:Things}.length; ${2:i}<${3:j}; ${2:i}++){\n\
     \  ${1:Things}[${2:i}]\n};"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -381,13 +540,56 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
+  customProperties:
+    prefix_values: [for]
+  description: null
+  displayName: t(:for_in)
+  expansion: "for (var ${1:key} in ${2:obj}){\n  $0\n};"
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [for]
+  description: null
+  displayName: t(:for_in_hasOwnProperty)
+  expansion: "for (var ${1:key} in ${2:obj}){\n    if(${2:obj}.hasOwnProperty(${1:key})){\n\
+    \      $0\n    }\n};"
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
   customProperties:
     prefix_values: [':,']
+  description: null
   displayName: Object Value JS
   expansion: ${1:value_name}:${0:value},
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -396,13 +598,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [':']
+  description: null
   displayName: 'Object key - key: "value"'
   expansion: '${1:key}: ${2:"${3:value}"}${4:, }'
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -411,13 +617,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: [timeout]
+  description: null
   displayName: setTimeout function
   expansion: setTimeout(function() {$0}, ${1:10});
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -426,13 +636,17 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
+  category: null
   customProperties:
     prefix_values: ['":f']
+  description: null
   displayName: Object Method String
   expansion: "'${1:${2:#thing}:${3:click}}': function(element){\n  $0\n}${4:,}"
+  iconPath: null
   input: [none]
   inputPath: null
   keyBindingMap: null
@@ -441,6 +655,105 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [nam]
+  description: null
+  displayName: Namespace
+  expansion: var ${1:name_namespace} = {$0};
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [nam]
+  description: null
+  displayName: Safe Namespace
+  expansion: var ${1:name_namespace} = ${1:name_namespace} || {};
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [mod]
+  description: null
+  displayName: Module Pattern
+  expansion: var ${1:module_name} = (function (){$0}());
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [mod]
+  description: null
+  displayName: Extend Module Pattern
+  expansion: var ${1:module_name} = (function (${1:module_name}){$0}(${1:module_name}));
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.SnippetElement
+  async: false
+  category: null
+  customProperties:
+    prefix_values: [mod]
+  description: null
+  displayName: Revealing Module Pattern
+  expansion: "var ${1:module_name} = (function (){\n    // private properties\n  \
+    \  // var private_properties = value;\n\n    // private methods\n    // privateMethod\
+    \ = function () {};\n\n    // revealing public API\n    return {\n    // RevealPrivateMethod:\
+    \ privateMethod\n    \n    };\n}());"
+  iconPath: null
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: insert_as_snippet
+  path: snippets/snippets.rb
+  runType: current_thread
+  scope: source.js
+  tags: *id001
   workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.TemplateElement
   async: false
