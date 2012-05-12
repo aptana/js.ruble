@@ -163,6 +163,16 @@ with_defaults :scope => "source.js" do
 }());"
   end
   
+  snippet t(:init_time_branching) do |s|
+    s.trigger = "init"
+    s.expansion = "if (${1:statement}) {\n\tvar ${2:function_name} = function (){\n\t\t$0\n\t}\n}\nelse if(${3:statement}) {\n\tvar ${2:function_name} = function(){\n\n\t};\n};"
+  end
+  
+  snippet t(:lazy_function_definition) do |s|
+    s.trigger = "lazy"
+    s.expansion = "var ${1:foo} = function (){\n\t\tif(${2:statement}) {\n\t\t\t${1:foo} = function ($0){\n\n\t\t\t};\n\t\t}\n\t\telse if(${3:statement}) {\n\t\t\t${1:foo} = function ($0){\n\n\t\t\t};\n\t\t};\n\n\t\treturn ${1:foo}($0);\n};"
+  end
+  
 # FIXME Not currently working due to unsupported TextMate functionality
   # snippet "Get Elements" do |s|
     # s.trigger = "get"

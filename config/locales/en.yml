@@ -31,4 +31,6 @@ en:
   module_pattern: "Module Pattern"
   extend_module_pattern: "Extend Module Pattern"
   revealing_module_pattern: "Revealing Module Pattern"
+  init_time_branchong: "Init Time Branching"
+  lazy_function_definition: "Lazy Function Definition"
   

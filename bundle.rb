@@ -68,6 +68,8 @@ bundle do |bundle|
         pattern_menu.command t(:module_pattern)
         pattern_menu.command t(:extend_module_pattern)
         pattern_menu.command t(:revealing_module_pattern)
+        pattern_menu.command t(:init_time_branching)
+        pattern_menu.command t(:lazy_function_definition)
     end
 	  js_menu.separator
 	  
