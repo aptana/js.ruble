@@ -29,6 +29,9 @@ bundle do |bundle|
 	      control_menu.separator
 	      control_menu.command t(:for)
 	      control_menu.command t(:for_native)
+        control_menu.separator
+        control_menu.command t(:for_in)
+        control_menu.command t(:for_in_hasOwnProperty)
 	    end
 	    core_menu.menu t(:language) do |language_menu|
         language_menu.command t(:object_key)
@@ -38,7 +41,9 @@ bundle do |bundle|
 	    end
 	    core_menu.menu t(:function) do |function_menu|
 	      function_menu.command t(:anonymous_function)
-	      function_menu.command t(:function)
+	      function_menu.command t(:function_declaration)
+	      function_menu.command t(:function_expression)
+	      function_menu.command t(:immediate_invocation_function)
 	      function_menu.separator
 	      function_menu.command t(:new_function)
 	      function_menu.command t(:new_method)
@@ -55,6 +60,18 @@ bundle do |bundle|
 	  js_menu.menu t(:bom) do |bom_menu|
 	    bom_menu.command t(:setTimeout)
 	  end
+	  
+	  js_menu.separator
+	  js_menu.menu t(:Pattern) do |pattern_menu|
+        pattern_menu.command t(:namespace)
+        pattern_menu.command t(:safe_namespace)
+        pattern_menu.command t(:module_pattern)
+        pattern_menu.command t(:extend_module_pattern)
+        pattern_menu.command t(:revealing_module_pattern)
+        pattern_menu.command t(:init_time_branching)
+        pattern_menu.command t(:lazy_function_definition)
+    end
+	  js_menu.separator
 	  
 	  js_menu.command t(:doc_for_word)
     js_menu.separator
