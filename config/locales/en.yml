@@ -21,4 +21,8 @@ en:
   doc_for_word: "Documentation for Word"
   copy_as_bookmarklet: "Copy as Bookmarklet to Clipboard"
   reformat_document: "Reformat Document"
+  console_debug: "Console Debug"
+  console_log: "Console Log"
+  console_warn: "Console Warn"
+  console_info: "Console Info"
   
