@@ -96,6 +96,26 @@ with_defaults :scope => "source.js" do
 }${4:,}"
   end
   
+  snippet t(:console_debug) do |s|
+    s.trigger = "cd"
+    s.expansion = "console.debug('${1:args}', ${0:// body...});"
+  end
+  
+  snippet t(:console_log) do |s|
+    s.trigger = "cl"
+    s.expansion = "console.log('${1:args}', ${0:// body...});"
+  end
+  
+  snippet t(:console_warn) do |s|
+    s.trigger = "cw"
+    s.expansion = "console.warn('${1:args}', ${0:// body...});"
+  end
+  
+  snippet t(:console_info) do |s|
+    s.trigger = "ci"
+    s.expansion = "console.info('${1:args}', ${0:// body...});"
+  end
+  
 # FIXME Not currently working due to unsupported TextMate functionality
   # snippet "Get Elements" do |s|
     # s.trigger = "get"
